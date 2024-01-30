@@ -1,3 +1,60 @@
-body {
-  background-color: coral;
+/*https://codepen.io/Jill-Lambert/pen/bwevpB*/
+/*font-family: fantasy*/
+
+
+
+.container{
+  background: url(https://i.pinimg.com/736x/30/71/2b/30712b4bc8832d63e65d8f2734dc077c.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+};
+
+.card-header {
+  font-family: fantasy;
+}
+
+.card-body {
+  text-align: center;
+  font-family: fantasy;
+  font-size:x-large
+}
+
+.all {
+  background-color: black;
+  color: white;
+  border: 3px solid white;
+  font-family: fantasy;
+}
+
+.gryff {
+background-color: #740001;
+color: #d3a625;
+border: 3px solid #eeba30;
+font-family: fantasy;
+}
+
+.huff {
+background-color: #f0c75e;
+color: #372e29;
+border: 3px solid #726255;
+font-family: fantasy;
+}
+
+.raven {
+background-color: #222f5b;
+color: #bebebe;
+border: 3px solid #946b2d;
+font-family: fantasy;
+
+;
+}
+
+.slyth {
+background-color: #2a623d;
+color: #aaaaaa;
+border: 3px solid #5d5d5d;
+font-family: fantasy;
+
 }
