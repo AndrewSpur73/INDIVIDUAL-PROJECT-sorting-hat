@@ -32,6 +32,16 @@ In the end, your app will look something like:
  -->
 ## Technical Requirements
 - You MUST plan your project and highly suggest using issue tickets. There are a few that have been provided for you to use already. Continue to add to these so you know what work you need to complete. 
+    - Create additional tickets and plan your project
+    - Update your readme with all the items you learned from planning.
+    - Create a loom video of not more than 2 minutes showing your video. Add link to Loom video to your readme.
+    - Deploy to Netlify and add deploy link to readme
+    - Optional Bonus
+      - House Colors: The color of the student's card changes depending on which house they were sorted.
+      - Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
+      - Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
+
+
 - You MAY use the `renderToDom()` function that we worked on in class, but you also need to be able to explain it if you use it
 - You have to create a data structure for your project. Review all the elements that need to be on the DOM and create the structure accordingly
 - You must use [Boostrap](https://getbootstrap.com/) to style your page components
@@ -47,6 +57,19 @@ In the end, your app will look something like:
 Once you have completed all the technical requirments, you should complete the following:
 - [README Requirements](https://github.com/orgs/nss-evening-web-development/discussions/13)
 - **RECOMMENDED** Loom Video: [Sign up for Loom](https://www.loom.com/signup) and record a video of you walking through your app 
+  - Name of the Project
+  - Overview of the project
+  - Link to your wireframes/prototype
+  - Link/screenshot of data flowchart
+  - Link to the deployed project (will learn later)
+  - Link to your project board (yes...even though it is a part of the repo)
+  - Description of the user and the problem you are solving for them
+  - Example 1: As a developer, it is important to understand the concepts of Array Methods. In this repo, I have code samples that show how I have worked through learning Array Methods
+  - Example 2: The user for my application is a working mother who wants to keep track of everyone's schedules. Normal ToDo lists are for single users. This application was created to allow multiple users to create, read, update, and delete items on a single list
+  - List of features
+  - Screenshots of your project
+  - List of contributors and links to their GH profiles
+  - Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great)
 
 ## Expel Button Hints
 Think of a way you can expel students without just hiding those divs on the page. This would mean when the button is clicked you modify the array of students and pass the new array into your `renderToDom()` function.  Double hint - put a unique id in the student object when you create them.
@@ -55,3 +78,11 @@ Think of a way you can expel students without just hiding those divs on the page
 - House Colors: The color of the student's card changes depending on which house they were sorted.
 - Card Sorting/Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 
+1: Create the structure of your HTML - 
+2: Create your renderToDom utility function - 
+3: Start building the HTML components and render on DOM -
+4: Add event listeners -
+5: Get button filters working ONE at a time -
+6: Get watch buttons working -
+7: Get delete buttons working -
+8: Add form to CREATE new items -
