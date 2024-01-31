@@ -56,5 +56,19 @@ background-color: #2a623d;
 color: #aaaaaa;
 border: 3px solid #5d5d5d;
 font-family: fantasy;
+}
 
+.card {
+  margin: 5px;
+}
+
+/*margin under buttons*/
+.buttonRow {
+  margin-bottom: 50px;
+}
+
+#firstYearContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

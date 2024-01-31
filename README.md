@@ -83,6 +83,4 @@ Think of a way you can expel students without just hiding those divs on the page
 3: Start building the HTML components and render on DOM -
 4: Add event listeners -
 5: Get button filters working ONE at a time -
-6: Get watch buttons working -
-7: Get delete buttons working -
-8: Add form to CREATE new items -
+7: Get expel buttons working -
