@@ -1,37 +1,4 @@
-
-const data = [
-  {
-    name: "Andrew Spurlock",
-    house: "Gryffindor",
-  },
-  {
-    name: "Katee Spurlock",
-    house: "Hufflepuff"
-  },  
-  {
-    name: "Griffy",
-    house: "Gryffindor",
-  },
-  {
-    name: "Wriggy",
-    house: "Hufflepuff"
-  },  
-  {
-    name: "Andrew Spurlock",
-    house: "Ravenclaw",
-  },
-  {
-    name: "Katee Spurlock",
-    house: "Slytherin"
-  },  
-  {
-    name: "Griffy",
-    house: "Gryffindor",
-  },
-  {
-    name: "Wriggy",
-    house: "Hufflepuff"
-  }]
+const students = []
 
   //Setup Utility Functions - RENDERTODOM 
 renderToDom = (divId, textToRender) => {
@@ -44,7 +11,6 @@ const sortingHatBtn = () => {
   const domString = `
   <div class="card">
     <div class="card-header">
-      
     </div>
   <div class="card-body">
     <h1 class="card-title">Welcome to Hogwarts!</h1>
@@ -53,27 +19,55 @@ const sortingHatBtn = () => {
   </div>
 </div>
   `
-  renderToDom("#enterStudent", domString)
+  renderToDom("#enterStudent", domString);
 }
 
 //Info Form after sorting hat btn 
 const studentForm = () => {
   const domString = `
- <form>
+ <form id="inputForm">
  <header>Enter First Year's Name</header>
   <div class="form-floating mb-3">
     <input class="form-control form-control-lg" type="text" placeholder="Full Name" id="fullName" aria-label="fullName" required>
     <label for="fullName">Full Name</label>
   </div>
-  <button id="sort-btn"
-    type="submit" 
-    class="btn btn-success" 
-  >
-    Submit
-  </button>
+  <button type="submit" class="btn btn-success" id="form-submit">Submit</button>
 </form>
   `
-  renderToDom("#studentForm", domString)
+  renderToDom("#studentForm", domString);
+
+   // Form Submit and New Student
+
+   const form = document.querySelector('#inputForm');
+   form.addEventListener('submit', (e) => {
+     e.preventDefault();
+     
+     const newStudentObj = {
+      //  id: students.length +1,
+       name: document.querySelector ('#fullName').value,
+       house: randomHouse()
+     }
+     students.push(newStudentObj);
+     cardsOnDom(students);
+     form.reset();
+   })
+}
+
+
+//Random House Function
+const randomHouse = () => {
+let randomNumber = Math.floor(Math.random() * 5);
+let house = '';
+if (randomNumber === 0) {
+  house = 'Gryffindor';
+} else if (randomNumber === 1) {
+  house = 'Hufflepuff';
+} else if (randomNumber === 2) {
+  house = 'Ravenclaw'
+} else {
+  house = 'Slytherin'
+}
+return house
 }
 
 //Filter Buttons
@@ -98,11 +92,12 @@ const cardsOnDom = (array) => {
     <div class="card-body">
       <h5 class="card-title">${item.name}</h5>
       <p class="card-text">${item.house}</p>
-      <button class="btn btn-danger" id="delete--${pet.id}">Expel!</button> 
+      <button class="btn btn-danger" id="expel--${item.id}">Expel!</button> 
     </div>
   </div>`
   })
-  renderToDom("#firstYearContainer", domString)
+  renderToDom("#firstYearCards", domString)
+  filterButtons();
 }
 
 
@@ -111,25 +106,28 @@ const cardsOnDom = (array) => {
 
 // EVENT LISTENERS //
 
-// const eventListeners = () => {
-//   const formCard = new bootstrap.Form(document.querySelector('#sort-btn'));
-// }
+const eventListeners = () => {
+  document.querySelector('#sort-btn').addEventListener('click', () => {
+    studentForm()
+  });
+
+}
 
 //Filter Btn Listeners!
 document.querySelector('#filterContainer').addEventListener('click', (e) => {
   if(e.target.id === "all") {
-    cardsOnDom(data)
+    cardsOnDom(students)
   } else if (e.target.id === "gryffindor") {
-    const gry = data.filter(taco => taco.house === "Gryffindor");
+    const gry = students.filter(taco => taco.house === "Gryffindor");
     cardsOnDom(gry);
   } else if (e.target.id === "hufflepuff") {
-    const huf = data.filter(taco => taco.house === "Hufflepuff");
+    const huf = students.filter(taco => taco.house === "Hufflepuff");
     cardsOnDom(huf);
   } else if (e.target.id === "ravenclaw") {
-    const rav = data.filter(taco => taco.house === "Ravenclaw");
+    const rav = students.filter(taco => taco.house === "Ravenclaw");
     cardsOnDom(rav);
   } else if (e.target.id === "slytherin") {
-    const sly = data.filter(taco => taco.house === "Slytherin");
+    const sly = students.filter(taco => taco.house === "Slytherin");
     cardsOnDom(sly);
   } 
 });
@@ -138,8 +136,9 @@ document.querySelector('#filterContainer').addEventListener('click', (e) => {
 //On Start Functions!
 const startApp = () => {
   sortingHatBtn();
-  filterButtons();
-  cardsOnDom(data);
+
+  // filterButtons();
+  // cardsOnDom(students);
   eventListeners(); // always last
 };
 
