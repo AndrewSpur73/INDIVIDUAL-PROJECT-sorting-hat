@@ -21,6 +21,11 @@
   font-size:x-large;
 }
 
+.form-header {
+  color: white;
+  font-family: fantasy;
+}
+
 .all {
   background-color: black;
   color: white;
@@ -59,7 +64,7 @@ font-family: fantasy;
 }
 
 .card {
-  margin: 5px;
+  margin: 15px;
 }
 
 /*margin under buttons*/
@@ -69,15 +74,35 @@ font-family: fantasy;
 
 #firstYearCards {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border: black solid 5px;
+ flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
 }
 
-#firstYearContainer {
-border: black solid 5px;
+.firstYearContainer {
+display: inline-flex;
+align-items: center;
 }
 
-#firstYearCards {
-  
+.card-title-first {
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  font-family: fantasy;
+}
+
+.Gryffindor {
+  background-color: #740001;
+}
+
+.Hufflepuff {
+  background-color: #f0c75e;
+}
+
+.Slytherin {
+  background-color: #2a623d;
+}
+
+.Ravenclaw {
+  background-color: #222f5b;
 }
