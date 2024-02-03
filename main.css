@@ -15,7 +15,11 @@
   font-family: fantasy;
 }
 
-.card-body {
+.quote {
+  color: #740001;
+}
+
+.welcome {
   text-align: center;
   font-family: fantasy;
   font-size:x-large;
@@ -72,16 +76,17 @@ font-family: fantasy;
   margin-bottom: 50px;
 }
 
+/* entire card container */
+.firstYearContainer {
+  display: flex;
+  justify-content: space-between;
+  }
+
+/* first year students */
 #firstYearCards {
   display: flex;
- flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
-}
-
-.firstYearContainer {
-display: inline-flex;
-align-items: center;
+  flex-direction: column;
+  font-family: fantasy;
 }
 
 .card-title-first {
@@ -91,18 +96,44 @@ align-items: center;
   font-family: fantasy;
 }
 
+#expelCards{
+  display: flex;
+  flex-direction: column;
+  font-family: fantasy;
+}
+
+.voldy-card {
+  background-image: url('https://static1.thegamerimages.com/wordpress/wp-content/uploads/2018/12/hpotter-and-the-eaters-wallpaper.jpg');
+  background-size: 18rem;
+  color: red;
+  width: 286px;
+  height: 142px;
+}
+
 .Gryffindor {
-  background-color: #740001;
+  background-image: url('https://images.alphacoders.com/556/thumb-350-556471.webp');
+  background-size: 18rem;
+  background-position: center;
+  color: white;
 }
 
 .Hufflepuff {
-  background-color: #f0c75e;
+  background-image: url('https://wallpapers.com/images/featured/hufflepuff-k6oxmpd516n9bj8l.jpg');
+  background-size: 18rem;
+  background-position: center;
+  color: white;
 }
 
 .Slytherin {
-  background-color: #2a623d;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRNrsWrF0Hx9emA7vC_wDteDGbefEIFK-Xw&usqp=CAU");
+  background-size: 18rem;
+  background-position: center;
+  color: white;
 }
 
 .Ravenclaw {
-  background-color: #222f5b;
+  background-image: url("https://wallpapers.com/images/featured/ravenclaw-0biazn74ja08p3un.jpg");
+  background-size: 18rem;
+  background-position: center;
+  color: white;
 }
