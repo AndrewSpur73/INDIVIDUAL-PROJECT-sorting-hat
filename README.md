@@ -66,3 +66,5 @@ Some Things I Learned
  - I learned that creating a flow chart of the order that everything is supposed to go through is extremely helpful. You can use that to focus on each step in order as it appears on the DOM.
  - How to use a random math function and apply it with strings
  - How to move an object from one array to another using a button
+
+https://spurlock-sortinghat.netlify.app/
