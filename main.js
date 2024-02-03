@@ -39,6 +39,8 @@ const studentForm = () => {
 </form>
   `;
   renderToDom("#studentForm", domString);
+//Scroll down to new cards until top of filter is reached
+  document.querySelector("#studentForm").scrollIntoView({behavior: 'smooth'});
 
   // Form Submit and New Student
   const form = document.querySelector("#inputForm");
@@ -121,6 +123,8 @@ const cardsOnDom = (array) => {
   });
   renderToDom("#firstYearCards", domString);
   filterButtons();
+//Scroll down to new cards until top of filter is reached
+  document.querySelector("#firstYearCards").scrollIntoView({behavior: 'smooth'});
 };
 
 //Voldy's Army
@@ -138,6 +142,8 @@ const voldyOnDaDom = (army) => {
   </div>`;
   });
   renderToDom("#expelCards", domString);
+//Scroll down to new cards until top of filter is reached
+  document.querySelector("#expelCards").scrollIntoView({behavior: 'smooth'});
 };
 
 //To sort cards Alphabetically
@@ -165,7 +171,8 @@ const eventListeners = () => {
       if (e.target.id.includes("expel")) {
         expelled = students.splice(index, 1);
         expelledStudents = expelledStudents.concat(expelled);
-        //https://stackoverflow.com/questions/45919837/move-object-from-one-array-to-another
+//The push() adds elements to the end of an array and returns the new length of the array.
+// The concat() method is used to merge arrays. Concat does not change the existing arrays, but instead returns a new array.
         cardsOnDom(students);
         voldyOnDaDom(expelledStudents);
       }
